@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="listaCompra">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="item" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="titulo" type="xs:string" use="required"></xs:attribute>
+                        <xs:attribute name="autor" type="xs:string" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+
+
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listaCompra [
+    <!ELEMENT listaCompra (item*)>
+    <!ELEMENT item EMPTY>
+    <!ATTLIST item nombre CDATA #IMPLIED>
+    <!ATTLIST item cantidad CDATA #REQUIRED>
+]>
+<listaCompra>
+    <item cantidad="12 litros" />
+    <item cantidad="3 barras de cuarto" />
+</listaCompra>-->

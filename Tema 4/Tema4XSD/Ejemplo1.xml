@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./ejemplo1.xsd">  <!--Hacemos referencia al espacio del nombre que habrá en el XSD-->
+    <nombre>Pedro</nombre>
+    <apellidos>Ortiz Pérez</apellidos>
+    <fecha_nacimiento>
+        <dia>15</dia>
+        <mes>04</mes>
+        <año>1996</año>
+        <diaSemana>Miércoles</diaSemana>
+    </fecha_nacimiento>
+    <direccion>
+        <calle>Principal</calle>
+        <codigopostal>41000</codigopostal>
+    </direccion>
+    <DNI>00000021F</DNI>
+    <edad nacionalidad="E">55</edad>
+</persona>

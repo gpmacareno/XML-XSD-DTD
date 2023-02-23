@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="persona">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string" minOccurs="0" maxOccurs="5" />
+                <xs:element name="apellidos" type="xs:string" />
+                <xs:element name="fecha_nacimiento">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dia" type="xs:integer" default="1"></xs:element>
+                            <xs:element name="mes" type="xs:integer" default="1"></xs:element>
+                            <xs:element name="año">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="1990" />
+                                        <xs:maxInclusive value="2023" />
+                                        <xs:totalDigits value="1000" />
+                                        <xs:fractionDigits value="0" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="diaSemana">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Lunes" />
+                                        <xs:enumeration value="Martes" />
+                                        <xs:enumeration value="Miércoles" />
+                                        <xs:enumeration value="Jueves" />
+                                        <xs:enumeration value="Viernes" />
+                                        <xs:enumeration value="Sabado" />
+                                        <xs:enumeration value="Domingo" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="direccion"></xs:element>
+                <xs:element name="DNI">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{8}[A-Z]"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="edad">
+                    
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:integer">
+                                <xs:attribute name="nacionalidad" type="xs:string" use="required"></xs:attribute>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="direccion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="calle" type="xs:string" />
+                <xs:element name="codigopostal" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+<!--Estructura basica de todos los XSD-->
+<!--Con type definimos el tipo del elemento cuando es simple type="xs:string"-->
+<!-- Con complexType definimos el tipo del elemento cuando es compuesto-->
+<!-- Para definir el orden de aparicion siendo inamovible con Sequence, tienen que salir todos-->
+<!-- Para definir el orden de aparicion y si aparece o no, solo eliges uno, puede variar con Choice-->
+<!-- Para definir el orden de aparicion en cualquier orden con All tienen que salir todos-->
+<!--minOccurs, minimo de apariciones. maxOccurs maximo de apariciones con unbounded definimos
+infinitas veces-->
+<!--Con default ponemos valores por defecto-->
+<!--Con fixed ponemos valores fijos-->
+<!--Restricciones min inclusive, minimo inclusivo,  max inclusive, maximo inclusivo totalDigits,
+fractionDigits para los decimales, totadigits para total de valores numericos.-->
+
+<!--Expresiones regulares:  Insertacion de un DNI, restricciones [0-9] {8} [A-Z] que salga un numero del 0 al 9
+8 veces y una letra de la A a la Z-->
+<!-- Atributos  use=”required” use=”optional” use=”prohibited”-->
+
+<!--            <xs:element name="edad"> Cuando sea un elemento vacio
+                    <xs:complexType>
+                        <xs:attribute name="nacionalidad" type="xs:string" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+-->

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="cuadros">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cuadro" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="titulo" type="xs:string" use="required"></xs:attribute>
+                        <xs:attribute name="autor" type="xs:string" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cuadros [
+    <!ELEMENT cuadros (cuadro*)>
+<!ELEMENT cuadro EMPTY>
+    <!ATTLIST cuadro titulo CDATA #REQUIRED>
+    <!ATTLIST cuadro autor
+CDATA #REQUIRED>
+]>
+<cuadros>
+    <cuadro titulo="Adán y Eva" autor="Alberto Durero" />
+    <cuadro
+autor="Lucas Cranach, el viejo" titulo="Adán y Eva" />
+</cuadros>-->

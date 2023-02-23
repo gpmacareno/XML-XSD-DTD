@@ -1,0 +1,37 @@
+<!--!DOCTYPE nodo_raiz(elementos)> Definido dentro del documento -->
+<!--!DOCTYPE nodo_raiz SYSTEM "fichero.dtd" así enlazamos un documento externo-->
+<!--------------------------------------------------------------------------------------->
+<!--En DTD existen:
+ELEMENTOS - LOS NODOS, LAS ETIQUETAS COMO EL BODY DEL HTML.
+ATRITBUTOS - IGUAL QUE EN HTML. COMPONENTES DEL ELEMENTO QUE NOS DAN INFORMACIÓN COMPLEMENTARIA DEL ELEMENTO DENTRO DE LA ETIQUETA O EN ESTE CASO DEL ELEMENTO.
+ENTIDADES - LO VEREMOS MAS ADELANTE.
+PCDATA - CARACTERES O DATOS ANALIZABLES.
+CDDATA - CARACTERES O DATOS NO ANALIZABLES.
+EMPTY - ELEMENTOS NO ANALIZABLES, NO TIENE DATOS COMO TAL SOLO ATRIBUTOS.
+-->
+<!--------------------------------------------------------------------------------------->
+<!--La definición seria ?xml:version='1.0'? --> <!--|| CON ESTO NO TIENE QUE APARECER TODO SOLO UNO ES EXCLUYENTE. CON , TIENEN QUE APARECER TODOS-->
+<!--!DOCTYPE datospersonales[ <!--Nodo raiz que define todo el documento, dentro del parentesis vendran sus elementos que definiremos mas adelante-->
+<!--!ELEMENT datospersonales(nombre, apellidos, direccion, br, email?,email*, email+)--> <!--Con la interrogación el dato email puede aparece o no (0 o 1 vez).El * es 0 o +, podría aparecerer varios emails. Con + obligamos a este elemento aparecer 1 o muchas veces, pero minimo 1. Sin simbolo 1 y 1 sola vez solamente.-->
+<!--!ELEMENT nombre(#PCDATA)--><!--(#PCDATA)--> <!--Ponemos DATA porque aqui guardamos DATOS como Pedro->
+<!--!ELEMENT apellidos(#PCDATA)--><!--(#PCDATA)--> <!--Ponemos DATA porque aqui guardamos DATOS como Pedro->
+<!--!ELEMENT direccion(#PCDATA)--><!--(#PCDATA)--> <!--Ponemos DATA porque aqui guardamos DATOS como Pedro->
+<!--!ELEMENT br EMPTY-->
+<!--!ELEMENT email (#PCDATA)-->
+]-->
+<!--Ejemplo de una etiqueta creada por nosotros mismos para un documento XML-->
+    <!--<nombre>Pedro</nombre>-->   
+    <!--<apellidos>Ramiro</apellidos>-->
+    <!--<direccion>Calle Ancha</direccion>-->
+    <!--br/-->
+<!--/datospersonales-->
+<!--------------------------------------------------------------------------------------->
+<!--EJEMPLO DE|| o usamos uno u otro-->
+
+<!--((web, email)|(direccion,cp))-->
+
+<!--<web>_</web>-->
+<!--<email>_</email>-->
+
+<!--<direccion>_</direccion>-->
+<!--<cp>_</cp>-->

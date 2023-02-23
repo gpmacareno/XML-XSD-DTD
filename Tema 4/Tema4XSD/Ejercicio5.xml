@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="./Ejercicio5.xsd">
+
+
+    <libro>
+        <titulo>El Quijote</titulo>
+        <autores>
+            <autor>Miguel de Cervantes</autor>
+        </autores>
+        <editorial>Anaya</editorial>
+        <descripcion>Burlas de las novelas de caballería</descripcion>
+    </libro>
+    <libro>
+        <titulo>Buenos Presagios</titulo>
+        <autores>
+            <autor>Neil Gaiman</autor>
+            <autor>Terry Pratchett</autor>
+        </autores>
+        <editorial>McGraw Hill</editorial>
+        <descripcion>Comedia de tono irónico sobre el anticristo</descripcion>
+    </libro>
+
+</libros>

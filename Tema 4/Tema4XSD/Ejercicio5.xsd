@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="libros">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="libro" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"/>
+                            <xs:element name="autores">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="autor" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="editorial" type="xs:string"/>
+                            <xs:element name="descripcion">  
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="200"></xs:maxLength>
+                                        <xs:whiteSpace value="collapse"/>
+                                    </xs:restriction>
+                                </xs:simpleType>  
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+<!-- <!ELEMENT libros (libro+)>
+<!ELEMENT libro (titulo, autores, editorial, descripcion)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autores (autor+)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT
+editorial (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>-->
+
+<!-- <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> en vez de xs podemos poner el prefijo 
+que queramos pero siempre debemos utilizar  ese en todo el documento-->

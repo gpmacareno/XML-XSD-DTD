@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!DOCTYPE personas [
+    <!ELEMENT personas (datospersonales+, datoslaborales+)>
+    <!ELEMENT datospersonales (nombre, apellidos, direccion, telefono, email*, foto*, pie)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+    <!ELEMENT direccion (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT foto EMPTY>
+    <!ELEMENT pie (#PCDATA)>
+    <!ELEMENT datoslaborales (empresa, direccion, cp)>
+    <!ELEMENT empresa (#PCDATA)>
+    <!ELEMENT cp (#PCDATA)>
+
+    <!ATTLIST datospersonales edad CDATA #REQUIRED> 
+    <!--<!ATTLIST datospersonales edad CDATA #IMPLIED> Required es obligatorio que aparezca, fixed valor fijo, implied puede o no aparecer.-->
+    <!--<!ATTLIST datospersonales edad CDATA #FIXED "18">-->
+    <!--<!ATTLIST datospersonales edad CDATA  "18" valor por defecto>-->
+    <!ATTLIST foto src CDATA "./nodisponible.jpg">
+    <!ENTITY copyright "@Fernando">
+    <!ENTITY anyo "2022">
+]>
+
+<personas>
+    <datospersonales edad="22">
+        <nombre>Pedro</nombre>
+        <apellidos>Ramírez</apellidos>
+        <direccion>Calle Ancha</direccion>
+        <telefono>666666666</telefono>
+        <email>yo@yo.com</email>
+        <email>yo@yo.com</email>
+        <foto src=""/>
+        <pie>&copyright; &anyo;</pie>
+    </datospersonales>
+    <datospersonales edad="19">
+        <nombre>Pedro</nombre>
+        <apellidos>Ramírez</apellidos>
+        <direccion>Calle Ancha</direccion>
+        <telefono>666666666</telefono>  
+        <pie>&copyright; &anyo;</pie>
+    </datospersonales>
+    <datoslaborales>
+        <empresa>Empresa S.A.</empresa>
+        <direccion>ccc</direccion>
+        <cp>410008</cp>
+    </datoslaborales>
+</personas>

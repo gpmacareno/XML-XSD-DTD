@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="persona">
+        <xs:complexType>
+            <xs:attribute name="dni" type="xs:string" use="optional"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persona [
+ <!ELEMENT persona EMPTY>
+ <!ATTLIST
+persona dni CDATA #IMPLIED>
+]>
+<persona dni="03141592E" /> -->
